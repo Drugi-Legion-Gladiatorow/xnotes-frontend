@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import IndexPage from "./pages/IndexPage"
+import Home from "./pages/Home"
 import ErrorPage from "./pages/404"
 
 const App: FC = () => {
@@ -8,7 +8,7 @@ const App: FC = () => {
     <Router>
       <div>
         <Switch>
-          <Route path="/" exact component={IndexPage} />
+          <Route path="/" exact component={Home} />
           <Route component={ErrorPage} />
         </Switch>
       </div>
