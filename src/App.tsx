@@ -1,7 +1,7 @@
-import React, { FC } from "react"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import Home from "./pages/Home"
-import ErrorPage from "./pages/404"
+import React, { FC } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import ErrorPage from './pages/404';
 
 const App: FC = () => {
   return (
@@ -13,7 +13,7 @@ const App: FC = () => {
         </Switch>
       </div>
     </Router>
-  )
-}
+  );
+};
 
-export default App
+export default App;

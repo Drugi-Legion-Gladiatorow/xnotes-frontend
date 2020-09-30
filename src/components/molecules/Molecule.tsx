@@ -1,7 +1,7 @@
-import React from "react"
+import React from 'react';
 
 const Molecule = () => {
-  return <div>Molecule</div>
-}
+  return <div>Molecule</div>;
+};
 
-export default Molecule
+export default Molecule;
