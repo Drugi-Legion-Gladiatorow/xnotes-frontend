@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './Button.module.scss';
 
 export interface ButtonProps {
@@ -47,4 +48,17 @@ export const Button: React.FC<ButtonProps> = ({
       {label}
     </button>
   );
+};
+
+Button.propTypes = {
+  primary: PropTypes.bool,
+  backgroundColor: PropTypes.string,
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  label: PropTypes.string.isRequired,
+};
+
+Button.defaultProps = {
+  primary: false,
+  backgroundColor: 'medium',
+  size: 'small',
 };

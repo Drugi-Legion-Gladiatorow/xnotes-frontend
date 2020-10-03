@@ -1,6 +1,7 @@
 import React from 'react';
-import { XnotesLogo } from '../assets';
+import PropTypes from 'prop-types';
 import styles from './Box.module.scss';
+import { XnotesLogo } from '../../../assets';
 
 export interface BoxProps {
   text: string;
@@ -15,4 +16,13 @@ export const Box: React.FC<BoxProps> = ({ text, backgroundColor, ...props }) => 
       {text}
     </p>
   );
+};
+
+Box.propTypes = {
+  text: PropTypes.string.isRequired,
+  backgroundColor: PropTypes.string,
+};
+
+Box.defaultProps = {
+  backgroundColor: 'var(--white)',
 };
