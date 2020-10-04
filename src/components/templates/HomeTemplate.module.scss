@@ -1,0 +1,12 @@
+.wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 4rem minmax(3.2rem, 0.15fr) minmax(min-content, 0.8fr) 1fr 4rem;
+  grid-template-columns:
+    [full-start] minmax(4rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 1fr) [col-end]
+    )
+    [center-end] minmax(4rem, 1fr)
+    [full-end];
+}
