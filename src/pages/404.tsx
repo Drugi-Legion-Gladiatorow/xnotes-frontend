@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import React, { FC } from 'react';
 
 const ErrorPage: FC = () => {
