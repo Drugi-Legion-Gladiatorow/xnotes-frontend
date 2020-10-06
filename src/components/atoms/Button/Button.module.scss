@@ -1,0 +1,20 @@
+.button {
+  // padding: 10px;
+  background-color: var(--bluish);
+  border-radius: 2px;
+  color: var(--white);
+  cursor: pointer;
+  font-size: var(--xs);
+  font-weight: var(--medium);
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.24)) drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.12));
+  line-height: var(--s);
+  padding: var(--padding-small) var(--padding-big);
+
+  &--disabled {
+    @extend .button;
+    background-color: var(--grey4);
+    color: var(--grey2);
+    cursor: not-allowed;
+    filter: none;
+  }
+}
