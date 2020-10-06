@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Button.module.scss';
+import styles from './ExampleButton.module.scss';
 
-export interface ButtonProps {
+export interface ExampleButtonProps {
   /**
    * Is this the principal call to action on the page?
    */
@@ -28,7 +28,7 @@ export interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-export const Button: React.FC<ButtonProps> = ({
+export const ExampleButton: React.FC<ExampleButtonProps> = ({
   primary = false,
   size = 'medium',
   backgroundColor,
@@ -50,14 +50,14 @@ export const Button: React.FC<ButtonProps> = ({
   );
 };
 
-Button.propTypes = {
+ExampleButton.propTypes = {
   primary: PropTypes.bool,
   backgroundColor: PropTypes.string,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   label: PropTypes.string.isRequired,
 };
 
-Button.defaultProps = {
+ExampleButton.defaultProps = {
   primary: false,
   backgroundColor: 'medium',
   size: 'small',
