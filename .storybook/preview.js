@@ -1,4 +1,4 @@
-import '../src/index.module.scss';
+import '../src/index.scss';
 // import global styles for every component
 
 // set custom viewports:
