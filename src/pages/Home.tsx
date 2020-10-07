@@ -2,7 +2,7 @@
 import React, { FC } from 'react';
 import HomeTemplate from '../components/templates/HomeTemplate';
 import { Title } from '../components/atoms/Title/Title';
-import { Button } from '../components/atoms/Button/Button';
+import { ButtonWithIcon } from '../components/atoms/ButtonWithIcon/ButtonWithIcon';
 import style from './Home.module.scss';
 import { Human, XnotesLogo } from '../assets';
 
@@ -16,9 +16,9 @@ const Home: FC = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aliquid corrupti
           dignissimos dolorem sapiente nisi rerum laborum ratione veniam eveniet sunt itaque odit ab
         </p>
-        <Button>Login with Github</Button>
-        <Button>Next</Button>
-        <Button disabled>Next</Button>
+        <ButtonWithIcon icon="github" black>
+          Login with Github
+        </ButtonWithIcon>
       </main>
       <Human title="Human" className={style.human} />
     </HomeTemplate>
