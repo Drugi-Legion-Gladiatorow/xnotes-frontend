@@ -10,6 +10,15 @@
   line-height: var(--s);
   padding: var(--padding-small) var(--padding-big);
 
+  &:hover {
+    background-color: var(--bluishHover);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 1px var(--white), 0 0 0 2px var(--black);
+    outline: none;
+  }
+
   &--disabled {
     @extend .button;
     background-color: var(--grey4);

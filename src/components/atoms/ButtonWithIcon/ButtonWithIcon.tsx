@@ -21,7 +21,7 @@ export const ButtonWithIcon: React.FC<ButtonWithIconProps> = ({
   return (
     <button type="button" className={buttonClass} {...props}>
       {icon && <Icon icon={icons[icon]} className={styles.icon} />}
-      {children && <span>{children}</span>}
+      {children && <span className={styles.text}>{children}</span>}
     </button>
   );
 };

@@ -13,11 +13,25 @@
   min-height: 5rem;
   min-width: 5rem;
   padding: var(--padding-small) var(--padding-narrow);
+  transition: all .25s;
+  
+  &:hover {
+    background-color: var(--bluishHover);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px var(--white), 0 0 0 4px var(--black);
+    outline: none;
+  }
 
   &--black {
     @extend .button;
     background-color: var(--black);
     color: var(--white);
+
+    &:hover {
+      background-color: var(--grey1);
+    }
   }
 }
 
@@ -28,4 +42,8 @@
   &:last-child {
     margin-right: 0;
   }
+}
+
+.text {
+  font-size: inherit;
 }
