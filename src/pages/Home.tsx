@@ -2,6 +2,7 @@
 import React, { FC } from 'react';
 import HomeTemplate from '../components/templates/HomeTemplate';
 import { Title } from '../components/atoms/Title/Title';
+import { Subtitle } from '../components/atoms/Subtitle/Subtitle';
 import { ButtonWithIcon } from '../components/atoms/ButtonWithIcon/ButtonWithIcon';
 import style from './Home.module.scss';
 import { Human, XnotesLogo } from '../assets';
@@ -12,10 +13,10 @@ const Home: FC = () => {
       <XnotesLogo className={style.logo} title="XnotesLogo" />
       <main className={style.main}>
         <Title>Your best notes application!</Title>
-        <p className={style.p}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aliquid corrupti
-          dignissimos dolorem sapiente nisi rerum laborum ratione veniam eveniet sunt itaque odit ab
-        </p>
+        <Subtitle>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua.
+        </Subtitle>
         <ButtonWithIcon icon="github" black>
           Login with Github
         </ButtonWithIcon>

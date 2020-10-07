@@ -1,0 +1,14 @@
+.subtitle {
+  padding: 10px 0 30px;
+  font-size: var(--m);
+  font-style: normal;
+  font-weight: var(--regular);
+  line-height: 1.5;
+  text-align: center;
+  color: var(--grey2);
+
+  @media (min-width: 80rem) {
+    padding: 20px 0 80px;
+    text-align: left;
+  }
+}
