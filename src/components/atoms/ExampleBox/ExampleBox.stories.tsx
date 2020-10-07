@@ -1,16 +1,16 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { Box, BoxProps } from './Box';
+import { ExampleBox, ExampleBoxProps } from './ExampleBox';
 
 export default {
   title: 'Example/Box',
-  component: Box,
+  component: ExampleBox,
   argTypes: {
     backgroundColor: { control: 'color' },
   },
 } as Meta;
 
-const Template: Story<BoxProps> = (args) => <Box {...args} />;
+const Template: Story<ExampleBoxProps> = (args) => <ExampleBox {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

@@ -1,0 +1,52 @@
+$fontWeights: (
+  regular: 400,
+  medium: 500,
+  bold: 700,
+);
+
+$colors: (
+  bluish: '#0096C7',
+  bluishHover: '#04769b',
+  grey1: '#333',
+  grey2: '#666',
+  grey3: '#999',
+  grey4: '#C8C8C8',
+  background: '#F2F2F2',
+  white: '#FAFAFA',
+  black: '#0C0C0C',
+);
+
+$fontSizes: (
+  xxs: '1.2rem',
+  xs: '1.4rem',
+  s: '1.6rem',
+  m: '2rem',
+  l: '2.4rem',
+  xl: '3.6rem',
+  xxl: '5.6rem',
+);
+
+$padding: (
+  small: '1rem',
+  narrow: '1.5rem',
+  regular: '2rem',
+  big: '3.6rem'
+);
+
+:root {
+  @each $variable, $value in $colors {
+    --#{$variable}: #{$value};
+  }
+
+  @each $variable, $value in $fontSizes {
+    --#{$variable}: #{$value};
+  }
+
+  @each $variable, $value in $fontWeights {
+    --#{$variable}: #{$value};
+  }
+
+  @each $variable, $value in $padding {
+    --padding-#{$variable}: #{$value};
+  }
+}
