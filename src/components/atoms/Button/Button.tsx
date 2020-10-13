@@ -1,4 +1,5 @@
-import React from 'react';
+// eslint-disable-next-line
+import React, { FC } from 'react';
 // import PropTypes from 'prop-types';
 import styles from './Button.module.scss';
 
@@ -7,7 +8,7 @@ export interface ButtonProps {
   disabled?: boolean;
 }
 
-export const Button: React.FC<ButtonProps> = ({ children, disabled = false }) => {
+export const Button: FC<ButtonProps> = ({ children, disabled = false }) => {
   const buttonClass = disabled ? styles['button--disabled'] : styles.button;
 
   return (
