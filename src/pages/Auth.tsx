@@ -1,13 +1,18 @@
 // eslint-disable-next-line
-import React, { FC, useContext, useEffect } from 'react';
-import AuthContext from '../contexts/AuthContext/AuthContext';
-
-// TO DO
-// CACHE
-// TYPES
+import React, { FC, useContext, useEffect, useState } from 'react';
+import { Redirect } from 'react-router-dom';
+import { AuthContext, InitialState } from '../contexts/AuthContextProvider';
 
 const Auth: FC = ({ location }: any) => {
-  const context: any = useContext(AuthContext);
+  const [data, setData] = useState<InitialState>({
+    isLoggedIn: false,
+    id: '',
+    githubId: '',
+    accessToken: '',
+    userName: '',
+    errorMessage: '',
+  });
+  const context = useContext(AuthContext);
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -16,17 +21,30 @@ const Auth: FC = ({ location }: any) => {
     const accessToken = params.get('accessToken');
     const userName = params.get('username');
 
-    context.setContext({ id, githubId, accessToken, userName });
-  }, [context, location.search]);
+    if (id && githubId && accessToken && userName) {
+      setData({ isLoggedIn: true, id, githubId, accessToken, userName, errorMessage: '' });
+    } else {
+      setData((d) => ({ ...d, errorMessage: "Login didn't work" }));
+    }
+    // eslint-disable-next-line
+  }, []);
 
-  // WARNING!! DELETE CONTEXT AND LOCATION.SEARCH FROM USEEFFECT ARRAY
+  useEffect(() => {
+    if (data.isLoggedIn) {
+      context.dispatch({ type: 'LOGIN', payload: data });
+    }
+    // eslint-disable-next-line
+  }, [data]);
 
-  return (
-    <>
-      aa
-      {/* {id ? <Redirect to="/repo" /> : <Redirect to="/" />} */}
-    </>
-  );
+  if (data.isLoggedIn) {
+    return <Redirect to="/repo" />;
+  }
+
+  if (data.errorMessage) {
+    return <div>{data.errorMessage}</div>;
+  }
+
+  return <>aa</>;
 };
 
 export default Auth;
