@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import { InitialState } from '../contexts/AuthContextProvider';
+import { initialState, InitialState } from '../contexts/AuthContextProvider';
 
 export interface Action {
   type: string;
@@ -11,13 +11,13 @@ const authReducer = (state: InitialState, action: Action) => {
     case 'LOGIN': {
       return {
         ...state,
-        isLoggedIn: action.payload.isLoggedIn,
+        ...action.payload,
       };
     }
     case 'LOGOUT': {
       return {
         ...state,
-        isLoggedIn: false,
+        ...initialState,
       };
     }
     default:

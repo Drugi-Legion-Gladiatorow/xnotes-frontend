@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import React, { FC, useCallback } from 'react';
+import React, { FC } from 'react';
 import HomeTemplate from '../components/templates/HomeTemplate';
 import { Title } from '../components/atoms/Title/Title';
 import { Subtitle } from '../components/atoms/Subtitle/Subtitle';
@@ -17,16 +17,20 @@ const Home: FC = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua.
         </Subtitle>
-        <ButtonWithIcon icon="github" black>
-          Login with Github
-        </ButtonWithIcon>
         <form action="http://localhost:5001" method="POST">
-          <input
-            type="submit"
+          <ButtonWithIcon
             // eslint-disable-next-line
-            onClick={() => (window.location.href = '/auth')}
-            value="XDD"
-          />
+            //@ts-ignore
+            // eslint-disable-next-line
+            onClick={() => {
+              window.location.href = '/auth';
+            }}
+            type="submit"
+            icon="github"
+            black
+          >
+            Login with Github
+          </ButtonWithIcon>
         </form>
       </main>
       <Human title="Human" className={style.human} />
