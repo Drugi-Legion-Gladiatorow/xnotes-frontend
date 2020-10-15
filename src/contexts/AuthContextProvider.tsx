@@ -17,7 +17,7 @@ export interface AuthValue {
   dispatch: React.Dispatch<Action>;
 }
 
-const initialState: InitialState = {
+export const initialState: InitialState = {
   isLoggedIn: false,
   id: '',
   githubId: '',

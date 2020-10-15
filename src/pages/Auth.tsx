@@ -1,17 +1,10 @@
 // eslint-disable-next-line
 import React, { FC, useContext, useEffect, useState } from 'react';
 import { Redirect } from 'react-router-dom';
-import { AuthContext, InitialState } from '../contexts/AuthContextProvider';
+import { AuthContext, initialState } from '../contexts/AuthContextProvider';
 
 const Auth: FC = ({ location }: any) => {
-  const [data, setData] = useState<InitialState>({
-    isLoggedIn: false,
-    id: '',
-    githubId: '',
-    accessToken: '',
-    userName: '',
-    errorMessage: '',
-  });
+  const [data, setData] = useState(initialState);
   const context = useContext(AuthContext);
 
   useEffect(() => {

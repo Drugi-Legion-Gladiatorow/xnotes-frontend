@@ -5,10 +5,9 @@ import { AuthContext } from '../contexts/AuthContextProvider';
 // TO DO
 // TYPES
 const Repo: FC = () => {
-  const context = useContext(AuthContext);
-  console.log(context);
+  const { auth } = useContext(AuthContext);
 
-  return <div>Repo page</div>;
+  return <div>Hi, {auth.userName}</div>;
 };
 
 export default Repo;
