@@ -1,5 +1,5 @@
-import React from 'react';
-// import PropTypes from 'prop-types';
+// eslint-disable-next-line
+import React, { FC } from 'react';
 import { Icon } from '@iconify/react';
 import icons from '../../../theme/icons';
 import styles from './ButtonWithIcon.module.scss';
@@ -10,7 +10,7 @@ export interface ButtonWithIconProps {
   black?: boolean;
 }
 
-export const ButtonWithIcon: React.FC<ButtonWithIconProps> = ({
+export const ButtonWithIcon: FC<ButtonWithIconProps> = ({
   children = '',
   icon = '',
   black = false,

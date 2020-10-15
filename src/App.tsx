@@ -1,17 +1,21 @@
 // eslint-disable-next-line
 import React, { FC } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import ErrorPage from './pages/404';
+import { Home, Auth, Repo, Error } from './pages';
+import AuthContextProvider from './contexts/AuthContextProvider';
 
 const App: FC = () => {
   return (
     <Router>
       <div>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route component={ErrorPage} />
-        </Switch>
+        <AuthContextProvider>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/auth" component={Auth} />
+            <Route exact path="/repo" component={Repo} />
+            <Route path="/*" component={Error} />
+          </Switch>
+        </AuthContextProvider>
       </div>
     </Router>
   );
