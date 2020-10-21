@@ -27,10 +27,16 @@ $fontSizes: (
 );
 
 $padding: (
+  xsmall: '.6rem',
   small: '1rem',
   narrow: '1.5rem',
   regular: '2rem',
   big: '3.6rem'
+);
+
+$borderRadius: (
+  small: '.5rem',
+  medium: '2rem',
 );
 
 :root {
@@ -48,5 +54,9 @@ $padding: (
 
   @each $variable, $value in $padding {
     --padding-#{$variable}: #{$value};
+  }
+
+  @each $variable, $value in $borderRadius {
+    --radius-#{$variable}: #{$value};
   }
 }
