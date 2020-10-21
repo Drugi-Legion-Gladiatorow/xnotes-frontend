@@ -1,0 +1,25 @@
+.inputRepoContainer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.inputRepo {
+  background-color: var(--white);
+  color: var(--blacke);
+  border: none;
+  border-radius: 2px;
+  // box-shadow: 0px 2px 2px var(--grey4), 0px 0px 2px var(--grey4);
+  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.24)) drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.12));
+  max-width: 90%;
+  padding: 10px;
+  outline: 0;
+
+  &:focus {
+    box-shadow: 0 0 0 1px var(--white), 0 0 0 2px var(--grey4);
+    outline: none;
+  }
+
+  @media (min-width: 80rem) {
+    max-width: 20%;
+  }
+}

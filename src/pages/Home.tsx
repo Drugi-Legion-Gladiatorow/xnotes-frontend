@@ -6,6 +6,7 @@ import { Subtitle } from '../components/atoms/Subtitle/Subtitle';
 import { ButtonWithIcon } from '../components/atoms/ButtonWithIcon/ButtonWithIcon';
 import style from './Home.module.scss';
 import { Human, XnotesLogo } from '../assets';
+import { InputRepo } from '../components/atoms/InputRepo/InputRepo';
 
 const Home: FC = () => {
   return (
@@ -32,6 +33,7 @@ const Home: FC = () => {
             Login with Github
           </ButtonWithIcon>
         </form>
+        <InputRepo type="text" handleOnChange={(e) => console.log(e.target.value)} />
       </main>
       <Human title="Human" className={style.human} />
     </HomeTemplate>
