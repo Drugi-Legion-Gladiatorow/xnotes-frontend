@@ -10,4 +10,4 @@ export default {
 const Template: Story<InputRepoProps> = (args) => <InputRepo {...args} />;
 
 export const Default = Template.bind({});
-Default.args = { type: 'text', handleOnChange: (e) => console.log(e.target.value) };
+Default.args = { type: 'text' };
