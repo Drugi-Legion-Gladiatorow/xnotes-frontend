@@ -8,6 +8,7 @@ import sync from '@iconify/icons-ic/baseline-sync';
 import arrowBack from '@iconify/icons-ic/round-arrow-back';
 import plus from '@iconify/icons-ant-design/plus-outlined';
 import github from '@iconify/icons-ant-design/github-filled';
+import search from '@iconify/icons-ant-design/search-outlined';
 
 type TIcons = Record<string, IconifyIcon>;
 
@@ -21,6 +22,7 @@ const icons: TIcons = {
   arrowBack,
   plus,
   github,
+  search,
 };
 
 export default icons;
