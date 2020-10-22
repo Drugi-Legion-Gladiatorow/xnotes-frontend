@@ -1,6 +1,5 @@
 // eslint-disable-next-line
 import React, { FC } from 'react';
-import { InputRepo } from 'components/atoms/InputRepo/InputRepo';
 import HomeTemplate from '../components/templates/HomeTemplate';
 import { Title } from '../components/atoms/Title/Title';
 import { Subtitle } from '../components/atoms/Subtitle/Subtitle';

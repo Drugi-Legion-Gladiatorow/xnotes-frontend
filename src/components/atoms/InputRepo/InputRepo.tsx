@@ -11,7 +11,13 @@ export interface InputRepoProps {
   handleOnChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const InputRepo: React.FC<InputRepoProps> = ({ placeholder, type, handleOnChange }) => {
+export const InputRepo: React.FC<InputRepoProps> = ({
+  placeholder,
+  ref,
+  type,
+  handleOnChange,
+  ...props
+}) => {
   return (
     <div className={styles.inputRepoContainer}>
       <input
@@ -19,6 +25,7 @@ export const InputRepo: React.FC<InputRepoProps> = ({ placeholder, type, handleO
         type={type}
         onChange={handleOnChange}
         placeholder={placeholder}
+        {...props}
       />
     </div>
   );
