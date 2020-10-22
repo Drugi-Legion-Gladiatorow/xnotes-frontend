@@ -9,6 +9,7 @@ export interface InputRepoProps {
   ref?: HTMLInputElement;
   type: InputRepoType;
   handleOnChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  error?: boolean;
 }
 
 export const InputRepo: React.FC<InputRepoProps> = ({
@@ -16,12 +17,14 @@ export const InputRepo: React.FC<InputRepoProps> = ({
   ref,
   type,
   handleOnChange,
+  error = false,
   ...props
 }) => {
+  const inputRepoStyle = error ? styles['inputRepo--error'] : styles.inputRepo;
   return (
     <div className={styles.inputRepoContainer}>
       <input
-        className={styles.inputRepo}
+        className={inputRepoStyle}
         type={type}
         onChange={handleOnChange}
         placeholder={placeholder}
